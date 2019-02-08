@@ -9,8 +9,8 @@
         <module name="csvToIMDG" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="csvToIMDG" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="csvToIMDG" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
