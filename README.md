@@ -18,3 +18,17 @@ Imports csv files into IMDG Maps, assuming first field is index<br />
   -v, --verbose   Be verbose.<br />
   -V, --version   Print version information and exit.<br />
 <br />
+<br />
+Sample execution: java -jar csvToIMDG-1.0-SNAPSHOT.jar -if Name -mn Sales -hz hazelcast-client.xml ../SalesJan2009.csv
+Feb 08, 2019 1:47:26 PM com.hazelcast.core.LifecycleService<br />
+INFO: hz.client_0 [dev] [3.11.1] HazelcastClient 3.11.1 (20181218 - d294f31) is CLIENT_CONNECTED<br />
+Feb 08, 2019 1:47:26 PM com.hazelcast.internal.diagnostics.Diagnostics<br />
+INFO: hz.client_0 [dev] [3.11.1] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.<br />
+simone: {Transaction_date=1/13/09 1:46, Product=Product1, Price=1200, Payment_Type=Mastercard, Name=simone, City=Lyngby, State=Kobenhavn, Country=Denmark, Account_Created=10/30/07 12:03, Last_Login=2/5/09 8:52, Latitude=55.7666667, Longitude=12.5166667}
+<br />
+...
+<br />
+From IMDG: hazelcast[Sales] > m.get simone<br />
+{Transaction_date=1/13/09 1:46, Product=Product1, Price=1200, Payment_Type=Mastercard, Name=simone, City=Lyngby, State=Kobenhavn, Country=Denmark, Account_Created=10/30/07 12:03, Last_Login=2/5/09 8:52, Latitude=55.7666667, Longitude=12.5166667}
+<br />
+
