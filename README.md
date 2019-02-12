@@ -32,4 +32,7 @@ simone: {Transaction_date=1/13/09 1:46, Product=Product1, Price=1200, Payment_Ty
 From IMDG: hazelcast[Sales] > m.get simone<br />
 {Transaction_date=1/13/09 1:46, Product=Product1, Price=1200, Payment_Type=Mastercard, Name=simone, City=Lyngby, State=Kobenhavn, Country=Denmark, Account_Created=10/30/07 12:03, Last_Login=2/5/09 8:52, Latitude=55.7666667, Longitude=12.5166667}
 <br />
-
+<br />
+As an example of using https://catalog.data.gov/dataset/crimes-2001-to-present-398a4 you can pair that with tomtom maps api and render the locations of all Murders in Chicago Area as reported from the above dataset:
+<br />
+![](./images/chicagomurders.png)
