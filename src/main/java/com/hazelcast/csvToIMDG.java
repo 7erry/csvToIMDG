@@ -75,7 +75,8 @@ public class csvToIMDG implements Callable<Void> {
                         System.out.println(k.get(indexField));
                         System.out.println(k);
                     }
-                    //map.putAsync(k.get(indexField),k);
+                    
+                    map.putAsync(k.get(indexField),k);
 
         });
 
