@@ -19,7 +19,7 @@ Imports csv files into IMDG Maps, assuming first field is index<br />
   -V, --version   Print version information and exit.<br />
 <br />
 <br />
-Sample execution: java -jar csvToIMDG-1.0-SNAPSHOT.jar -if Name -mn Sales -hz hazelcast-client.xml ../SalesJan2009.csv<br />
+Sample execution: java -jar target/csvToIMDG-1.0-SNAPSHOT-jar-with-dependencies.jar -if Name -mn Sales -hz hazelcast-client.xml ../SalesJan2009.csv<br />
 <br />
 Feb 08, 2019 1:47:26 PM com.hazelcast.core.LifecycleService<br />
 INFO: hz.client_0 [dev] [3.11.1] HazelcastClient 3.11.1 (20181218 - d294f31) is CLIENT_CONNECTED<br />
