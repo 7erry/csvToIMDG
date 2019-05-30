@@ -58,13 +58,20 @@ public class csvToIMDG implements Callable<Void> {
         hz = HazelcastClient.newHazelcastClient(config);
         IMap map = hz.getMap(mapName);
 
+	if(verbose) System.out.println("Using map:\t"+mapName);
+
         Map<String, Map<String, String>> response = new HashMap<>();
         CsvMapper mapper = new CsvMapper();
         CsvSchema schema = CsvSchema.emptySchema().withHeader();
         Map<String, String> entry;
+
+	if(verbose) System.out.println("Importing file:\t"+file);
+
         MappingIterator<Map<String, String>> iterator = mapper.reader(Map.class)
                 .with(schema)
                 .readValues(file);
+
+	if(verbose) System.out.println("Iterator:\t"+iterator);
 
         iterator
                 .readAll()
@@ -75,7 +82,7 @@ public class csvToIMDG implements Callable<Void> {
                         System.out.println(k.get(indexField));
                         System.out.println(k);
                     }
-                    
+
                     map.putAsync(k.get(indexField),k);
 
         });
