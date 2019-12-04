@@ -79,12 +79,12 @@ public class csvToIMDG implements Callable<Void> {
                 .parallel()
                 .forEach((k)->{
                     if(verbose) {
-                        System.out.println(k.get(indexField));
-                        System.out.println(k);
+                        System.out.println("index:\t"+k.get(indexField));
+                        System.out.println("value:\t"+k);
                     }
-
+		    try{ 
                     map.putAsync(k.get(indexField),k);
-
+		    }catch(Exception e){}
         });
 
         if(verbose)
