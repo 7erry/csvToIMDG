@@ -89,10 +89,9 @@ public class csvToIMDG implements Callable<Void> {
                 .readAll()
                 .stream()
                 .parallel()
-                .forEach((k)->{
-                    if(verbose) {
-<<<<<<< HEAD
-                        if(indexJoinFields.isEmpty()) {
+                .forEach((k)-> {
+                    if (verbose) {
+                        if (indexJoinFields.isEmpty()) {
                             System.out.println(k.get(indexField));
                         } else {
                             System.out.println(indexJoinFields.split(compoundIndexChar)[0]);
@@ -100,22 +99,13 @@ public class csvToIMDG implements Callable<Void> {
                         }
                         System.out.println(k);
                     }
-                    if(indexJoinFields.isEmpty()) {
-                        map.set(k.get(indexField),k);
+                    if (indexJoinFields.isEmpty()) {
+                        map.set(k.get(indexField), k);
                     } else {
                         map.set(k.get(indexJoinFields.split(compoundIndexChar)[0]) + compoundIndexChar + k.get(indexJoinFields.split(compoundIndexChar)[1]), k);
                     }
-
-=======
-                        System.out.println("index:\t"+k.get(indexField));
-                        System.out.println("value:\t"+k);
-                    }
-		    try{ 
-                    map.putAsync(k.get(indexField),k);
-		    }catch(Exception e){}
->>>>>>> f70f92910b952a905f1ca55f4758d57f6c7e7ff0
-        });
-
+                });
+        
         if(verbose)
             System.out.println("Imported:\t"+map.size());
 
