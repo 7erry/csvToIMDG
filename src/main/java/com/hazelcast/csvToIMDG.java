@@ -91,6 +91,7 @@ public class csvToIMDG implements Callable<Void> {
                 .parallel()
                 .forEach((k)->{
                     if(verbose) {
+<<<<<<< HEAD
                         if(indexJoinFields.isEmpty()) {
                             System.out.println(k.get(indexField));
                         } else {
@@ -105,6 +106,14 @@ public class csvToIMDG implements Callable<Void> {
                         map.set(k.get(indexJoinFields.split(compoundIndexChar)[0]) + compoundIndexChar + k.get(indexJoinFields.split(compoundIndexChar)[1]), k);
                     }
 
+=======
+                        System.out.println("index:\t"+k.get(indexField));
+                        System.out.println("value:\t"+k);
+                    }
+		    try{ 
+                    map.putAsync(k.get(indexField),k);
+		    }catch(Exception e){}
+>>>>>>> f70f92910b952a905f1ca55f4758d57f6c7e7ff0
         });
 
         if(verbose)

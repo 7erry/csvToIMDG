@@ -28,7 +28,11 @@
         <dependency>
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast-all</artifactId>
+<<<<<<< HEAD
             <version>5.0-BETA-1</version>
+=======
+            <version>3.12.4</version>
+>>>>>>> f70f92910b952a905f1ca55f4758d57f6c7e7ff0
         </dependency>
     <dependency>
         <groupId>com.fasterxml.jackson.dataformat</groupId>
