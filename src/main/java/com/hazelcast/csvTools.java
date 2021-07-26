@@ -18,8 +18,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 @CommandLine.Command(description = "Imports csv files into IMDG Maps, assuming first field is index",
-name = "csvToIMDG", mixinStandardHelpOptions = true, version = "checksum 3.0")
-public class csvToIMDG implements Callable<Void> {
+name = " csvTools", mixinStandardHelpOptions = true, version = "checksum 3.0")
+public class  csvTools implements Callable<Void> {
 
     @CommandLine.Parameters(index = "0", description = "The File name of source")
     private File file;
@@ -45,7 +45,7 @@ public class csvToIMDG implements Callable<Void> {
     private HazelcastInstance hz;
 
     public static void main(String[] args) {
-        CommandLine.call(new csvToIMDG(), args);
+        CommandLine.call(new  csvTools(), args);
 
     }
 

@@ -1,8 +1,8 @@
-# csvToIMDG
+# csvTools
 
 Command Line Interface to read data from Comma Seperated Value file, identify an index as provided by the user, insert into an In Memory Data Grid.
 <br />
-Usage: csvToIMDG [-hvV] [-hz=<hzConfig>] [-if=<indexField>] [-it=<indexType>]<br />
+Usage: csvTools [-hvV] [-hz=<hzConfig>] [-if=<indexField>] [-it=<indexType>]<br />
                  [-mn=<mapName>] <file><br />
 Imports csv files into IMDG Maps, assuming first field is index<br />
       <file>      The File name of source<br />
@@ -19,7 +19,7 @@ Imports csv files into IMDG Maps, assuming first field is index<br />
   -V, --version   Print version information and exit.<br />
 <br />
 <br />
-Sample execution: java -jar target/csvToIMDG-1.0-SNAPSHOT-jar-with-dependencies.jar -if Name -mn Sales -hz hazelcast-client.xml ../SalesJan2009.csv<br />
+Sample execution: java -jar target/csvTools-1.0-SNAPSHOT-jar-with-dependencies.jar -if Name -mn Sales -hz hazelcast-client.xml ../SalesJan2009.csv<br />
 <br />
 Feb 08, 2019 1:47:26 PM com.hazelcast.core.LifecycleService<br />
 INFO: hz.client_0 [dev] [3.11.1] HazelcastClient 3.11.1 (20181218 - d294f31) is CLIENT_CONNECTED<br />
